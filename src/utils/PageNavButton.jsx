@@ -9,6 +9,7 @@ const PAGES = [
     '/react-state-rerender-demo',
     '/bad-redux-demo',
     '/good-redux-demo',
+    '/context-gotcha-demo',
 ];
 
 function PageNavButton({ currentPage, type }) {

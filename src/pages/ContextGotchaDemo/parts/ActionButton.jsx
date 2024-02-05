@@ -1,12 +1,8 @@
 import { Button } from '@psionic/ui';
 import RerenderCount from '@utils/RerenderCount';
 import useTrackRerenderCount from '@utils/useTrackRerenderCount';
-import localStyles from '../BadReduxDemo.module.scss';
+import localStyles from '../ContextGotchaDemo.module.scss';
 
-/**
- * This component is a simple action button that will be used to toggle the "supported" flags for
- * each platform in the PlatformSupportList component.
- */
 function ActionButton({ onClick, id, children }) {
 
     // Utility to track the re-render count of this component
@@ -26,7 +22,7 @@ function ActionButton({ onClick, id, children }) {
                 <RerenderCount emitEventName={`ActionButton-${id}`}/>
             </div>
         </div>
-    )
+    );
 }
 
 export default ActionButton;
