@@ -9,4 +9,10 @@
     margin-right: auto;
     box-sizing: border-box;
     margin-bottom: 56px;
+
+    & > header {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+    }
 }

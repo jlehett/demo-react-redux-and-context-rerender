@@ -1,24 +1,20 @@
-import { useState } from 'react';
 import RerenderCount from '@utils/RerenderCount';
 import useTrackRerenderCount from '@utils/useTrackRerenderCount';
+import { usePageSlice } from './PageSlice';
 import PlatformSupportItem from './PlatformSupportItem';
 import ActionButton from './ActionButton';
-import localStyles from '../ReactStateRerenderDemo.module.scss';
+import localStyles from '../BadReduxDemo.module.scss';
 
 function PlatformSupportList() {
 
     useTrackRerenderCount('PlatformSupportList');
 
-    const [supportsMicrosoft, setSupportsMicrosoft] = useState(false);
-    const [supportsApple, setSupportsApple] = useState(false);
-
-    function toggleSupportsMicrosoft() {
-        setSupportsMicrosoft(prev => !prev);
-    }
-
-    function toggleSupportsApple() {
-        setSupportsApple(prev => !prev);
-    }
+    const {
+        supportsMicrosoft,
+        supportsApple,
+        toggleSupportsApple,
+        toggleSupportsMicrosoft,
+    } = usePageSlice();
 
     function toggleBoth() {
         toggleSupportsMicrosoft();

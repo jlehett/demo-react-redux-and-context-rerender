@@ -1,23 +1,26 @@
-import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import RerenderCount from '@utils/RerenderCount';
 import useTrackRerenderCount from '@utils/useTrackRerenderCount';
+import {
+    toggleSupportsApple as action_toggleSupportsApple,
+    toggleSupportsMicrosoft as action_toggleSupportsMicrosoft,
+} from './PageSlice';
 import PlatformSupportItem from './PlatformSupportItem';
 import ActionButton from './ActionButton';
-import localStyles from '../ReactStateRerenderDemo.module.scss';
+import localStyles from '../GoodReduxDemo.module.scss';
 
 function PlatformSupportList() {
 
     useTrackRerenderCount('PlatformSupportList');
 
-    const [supportsMicrosoft, setSupportsMicrosoft] = useState(false);
-    const [supportsApple, setSupportsApple] = useState(false);
+    const dispatch = useDispatch();
 
     function toggleSupportsMicrosoft() {
-        setSupportsMicrosoft(prev => !prev);
+        dispatch(action_toggleSupportsMicrosoft());
     }
 
     function toggleSupportsApple() {
-        setSupportsApple(prev => !prev);
+        dispatch(action_toggleSupportsApple());
     }
 
     function toggleBoth() {
@@ -28,8 +31,8 @@ function PlatformSupportList() {
     return (
         <div className={localStyles.platformSupportList}>
             <ul>
-                <PlatformSupportItem platform="Microsoft" supported={supportsMicrosoft}/>
-                <PlatformSupportItem platform="Apple" supported={supportsApple}/>
+                <PlatformSupportItem platform="Microsoft"/>
+                <PlatformSupportItem platform="Apple"/>
             </ul>
             <div className={localStyles.actions}>
                 <ActionButton onClick={toggleSupportsMicrosoft} id="Microsoft">
