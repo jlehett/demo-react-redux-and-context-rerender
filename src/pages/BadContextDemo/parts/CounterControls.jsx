@@ -1,11 +1,11 @@
 import { useContext } from 'react';
-import { SetCounterContext } from './CounterContext';
+import CounterContext from './CounterContext';
 import ActionButton from './ActionButton';
-import localStyles from '../ContextGotchaDemo.module.scss';
+import localStyles from '../BadContextDemo.module.scss';
 
 function CounterControls() {
 
-    const setCount = useContext(SetCounterContext);
+    const { setCount } = useContext(CounterContext);
 
     function incrementCount() {
         setCount(prev => prev + 1);

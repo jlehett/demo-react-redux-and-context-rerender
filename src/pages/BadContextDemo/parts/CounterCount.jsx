@@ -1,14 +1,14 @@
 import { useContext } from 'react';
 import useTrackRerenderCount from '@utils/useTrackRerenderCount';
 import RerenderCount from '@utils/RerenderCount';
-import { CounterContext } from './CounterContext';
-import localStyles from '../ContextGotchaDemo.module.scss';
+import CounterContext from './CounterContext';
+import localStyles from '../BadContextDemo.module.scss';
 
 function CounterCount() {
 
     useTrackRerenderCount('CounterCount');
 
-    const count = useContext(CounterContext);
+    const { count } = useContext(CounterContext);
 
     return (
         <div className={localStyles.countWrapper}>

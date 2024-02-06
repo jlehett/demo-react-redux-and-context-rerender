@@ -7,9 +7,11 @@ import {
 
 const PAGES = [
     '/react-state-rerender-demo',
+    '/bad-context-demo',
+    '/context-gotcha-demo',
+    '/good-context-demo',
     '/bad-redux-demo',
     '/good-redux-demo',
-    '/context-gotcha-demo',
 ];
 
 function PageNavButton({ currentPage, type }) {
@@ -27,7 +29,6 @@ function PageNavButton({ currentPage, type }) {
         const currentIndex = PAGES.indexOf(currentPage);
         const newIndex = type === 'prev' ? currentIndex - 1 : currentIndex + 1;
         const newPage = PAGES[newIndex];
-
         navigate(newPage);
     }
 

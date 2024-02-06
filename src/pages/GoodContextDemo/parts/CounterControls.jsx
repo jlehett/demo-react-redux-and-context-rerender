@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { SetCounterContext } from './CounterContext';
 import ActionButton from './ActionButton';
-import localStyles from '../ContextGotchaDemo.module.scss';
+import localStyles from '../GoodContextDemo.module.scss';
 
 function CounterControls() {
 

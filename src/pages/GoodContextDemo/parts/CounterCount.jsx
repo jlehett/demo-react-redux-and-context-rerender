@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import useTrackRerenderCount from '@utils/useTrackRerenderCount';
 import RerenderCount from '@utils/RerenderCount';
 import { CounterContext } from './CounterContext';
-import localStyles from '../ContextGotchaDemo.module.scss';
+import localStyles from '../GoodContextDemo.module.scss';
 
 function CounterCount() {
 
