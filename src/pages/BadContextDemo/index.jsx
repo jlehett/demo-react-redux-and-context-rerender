@@ -2,6 +2,10 @@ import PageNavButton from '@utils/PageNavButton';
 import CounterModule from './parts/CounterModule';
 import localStyles from './BadContextDemo.module.scss';
 
+/**
+ * This page will demonstrate how a poorly optimized React Context can cause unnecessary re-renders
+ * of components.
+ */
 function BadContextDemo() {
     return (
         <div className={localStyles.pageContent}>

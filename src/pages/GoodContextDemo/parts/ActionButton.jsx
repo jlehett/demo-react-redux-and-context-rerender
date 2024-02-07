@@ -3,6 +3,10 @@ import RerenderCount from '@utils/RerenderCount';
 import useTrackRerenderCount from '@utils/useTrackRerenderCount';
 import localStyles from '../GoodContextDemo.module.scss';
 
+/**
+ * This component is a simple action button that will be used to increment or decrement
+ * the count in the CounterContext.
+ */
 function ActionButton({ onClick, id, children }) {
 
     // Utility to track the re-render count of this component

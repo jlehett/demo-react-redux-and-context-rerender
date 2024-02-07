@@ -2,6 +2,10 @@ import PageNavButton from '@utils/PageNavButton';
 import CounterModule from './parts/CounterModule';
 import localStyles from './ContextGotchaDemo.module.scss';
 
+/**
+ * This page will demonstrate an additional "gotcha" when it comes to optimizing
+ * React Context usage.
+ */
 function ContextGotchaDemo() {
     return (
         <div className={localStyles.pageContent}>
